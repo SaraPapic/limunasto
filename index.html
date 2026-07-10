@@ -1082,9 +1082,24 @@
     ],
     "instructions": "Testo: pomešaj u činiji brašno, 50g skroba i pola kašičice soli. Dodaj malo izrendane kore od limuna. Ubaci i 100g šećera. Iseckaj hladan puter na kockice, pa ga brzo umešaj u brašno, štipkajući smesu tako da se brašno inkorporira u puter; cilj je da se puter nikad ne zagreje. Rezultat treba da izgleda kao gomila krupnih i sitnih mrva. U smesu dodaj jaje i kašiku-dve jako hladne vode, promešaj i formiraj testo u kuglu. Kuglu malo spljosni pa je umotaj u foliju i stavi u frižider da odmori bar sat vremena. Krem: oljušti limun pazeći da zahvatiš samo žuti deo kore (beli deo kore je gorak). Stavi mleko, pavlaku i sok od polovine limuna da se zagreju, ali ne dopusti da provri. U mleko dodaj vanilu i koru od limuna. Dok se mleko greje umuti 6 žumanaca i 90g šećera dok smesa ne postane svetla i penušava, pa u tu smesu pažljivo dodaj 45g skroba, pazeći na gromuljice. Smesu sa žumancima sipaj u vrelo mleko i kuvaj mešajući dok se ne zgusne (ne više od 3-4 minuta). Gotov krem onda procedi kroz cediljku i stavi sa strane. Upali rernu na 200 stepeni. Izvadi testo iz frižidera. U zavisnosti od kalupa za kolače koji imaš, razvij testo oklagijom u oblik malo veći od kalupa, pa ga nežno spusti u kalup (ako se negde raspadne samo zakrpi). Ako ti se čini da se testo malo zagrejalo, stavi ga sa sve kalupom u frižider na desetak minuta. Pre pečenja, prekrij testo papirom za pečenje i sipaj pasulj preko; težina pasulja će onemogućiti dnu testa da se podigne dok se peče. Ubaci testo s pasuljem u rernu i peci dok ivice ne počnu da dobijaju lepu zlatnu boju, oko 20-30 minuta. Izvadi testo iz rerne i pažljivo podigni papir za pečenje za pasuljima (koji su sad jako vreli) i stavi ih sa strane. Sipaj krem u “koru” i vrati sve u rernu na 10 minuta. Gotov kolač ohladi na sobnoj temperaturi, pa ga stavi u frižider; treba sasvim da se ohladi pre jela kako bi se krem učvrsnuo."
   }
-]
+
 
         ];
+
+
+function init() {
+    const container = document.getElementById('feed-container');
+    container.innerHTML = recipes.map(recipe => `
+        <div class="recipe-card">
+            <h2 class="recipe-card-title">${recipe.title}</h2>
+            <div class="recipe-card-excerpt">${recipe.instructions.substring(0, 150)}...</div>
+            <button class="read-more-btn">Pročitaj recept</button>
+        </div>
+    `).join('');
+}
+
+// Run when the page loads
+document.addEventListener('DOMContentLoaded', init);
 
         // State Management
         let currentCategory = 'Svi recepti';
