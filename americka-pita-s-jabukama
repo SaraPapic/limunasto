@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8"><title>Američka pita s jabukama</title>
+    <style>body{font-family:sans-serif;line-height:1.6;max-width:600px;margin:3rem auto;padding:0 1rem;} a{color:#2c3e50;text-decoration:none;font-weight:bold;}</style>
+</head>
+<body>
+    <a href="index.html">← Nazad</a>
+    <h1>Američka pita s jabukama</h1>
+    <p><strong>Kategorija:</strong> Svi recepti, Slatko, Rerna</p>
+    <h3>Sastojci za testo:</h3>
+    <ul>
+        <li>Brašno 450g, Puter 345g, Beli šećer 2 kašike, So 1 puna kašičica, Jabukovo sirće 2 kašike, Voda 100ml, Jaje 1 (za premazivanje)</li>
+    </ul>
+    <h3>Sastojci za fil:</h3>
+    <ul>
+        <li>Jabuke 1-1,2kg, Limunov sok kašika-dve, Braon šećer 2 kašike, Beli šećer 1 kašika, Gusti sok 200ml, Cimet 1 kašičica, Vanila 1 kašičica, Kukuruzov skrob 1 kašičica, Soli malo</li>
+    </ul>
+    <h3>Priprema:</h3>
+    <p>Iseci hladni puter na kocke i ubaci ga u multipraktik zajedno s brašnom, soli i šećerom; pulsiraj dok se ne umeša tako da i dalje ima relativno velikih grudvica putera. Prespi brašno u činiju i dodaj sirće i hladnu vodu, pa pomešaj varjačom kako se testo ne bi previše ugrejalo. Formiraj dve lopte rukama i premesti ih na pobrašnjenju radnu površinu. Spljeskaj jednu od lopti, pa je iseci na četiri jednaka dela; složi ih jedne preko drugih, pa ponovo spljeskaj testo u relativno debeo disk. Ponovi postupak s drugim delom testa, umotaj oba diska u plastičnu foliju pa ih stavi u frižider da se ohlade.</p>
+    <p>Pripremi fil. Jabuke oljušti i iseci na četiri dela, odvoji sredinu i iseci na tanke šnite. Pospi isečene jabuke limunom, braon i belim šećerom, solju i na kraju cimetom i sve dobro promešaj. Jabuke treba da stoje u “marinadi” oko 2 sata.</p>
+    <p>Kad su jabuke već odstojale, pripremi sos. Stavi sok zajedno sa vanilom da se kuva u maloj posudi. Kad se količina tečnosti smanji za pola, dodaj sok koji su jabuke ispustile i pusti da prokuva. Kad u šerpi ostane samo oko 150ml tečnosti, dodaj skrob i pusti da se sve zgusne. Pusti da se malo ohladi, pa sipaj preko jabuka i dobro promešaj.</p>
+    <p>Uzmi jedan od diskova testa i izvadi ga na radnu površinu. Oklagijom ga razvuci u krug koji je bar za oko 4-5cm širi od posude za pitu koju ćeš upotrebiti. Razvučeno testo nežno spusti u posudu za pitu, rukama ga prijanjajući za dno i strane. Pokrij sud plastičnom folijom i vrati ga u frižider.</p>
+    <p>Upali rernu na 190 stepeni. Uzmi drugi disk testa iz frižidera i razvuci ga u krug koji je bar 2cm širi od posude za pitu. Izvadi posudu za pitu sa dnom iz frižidera, sipaj jabuke i prekrij sa drugim delom testa. Ravnom stranom viljuške pritiskaj po obodu tako da se testa spoje. Iseci višak testa nožem i stavi pitu u friz na 10 minuta. Izvadi pitu iz friza i premaži je izlupanim jajetom u koje je dodato malo vode. Na kraju može da se pospe i sa malo šećera. Pita se peče 1:30-2:00 sati. Pita mora sasvim da se ohladi pre sečenja!</p>
+</body>
+</html>
