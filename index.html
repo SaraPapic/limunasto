@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limunasti kuvar – Šta Sara i Andrej jedu</title>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Sora (Clean, Geometric Sans-Serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -37,7 +37,7 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Sora', sans-serif;
             background-color: var(--light-bg);
             color: var(--text-main);
             line-height: 1.7;
@@ -78,21 +78,20 @@
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 800;
             color: var(--dark);
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
             margin-bottom: 0.5rem;
             cursor: pointer;
+            text-transform: uppercase;
         }
 
         header .subtitle {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: var(--accent);
-            font-weight: 500;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         /* NAVIGATION BAR */
@@ -101,25 +100,27 @@
             border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            flex-wrap: wrap;
         }
 
         nav a {
             color: var(--text-main);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 0.9rem;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 1rem;
             border-radius: var(--radius-md);
+            letter-spacing: 0.3px;
         }
 
         nav a:hover, nav a.active {
@@ -145,7 +146,7 @@
 
         /* MAIN CONTENT AREA */
         main {
-            min-width: 0; /* Prevents flex/grid overflow */
+            min-width: 0;
         }
 
         /* SIDEBAR AREA */
@@ -164,15 +165,17 @@
         }
 
         .sidebar-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 1.1rem;
+            font-weight: 700;
             color: var(--dark);
             margin-bottom: 1.2rem;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.6rem;
             border-bottom: 2px solid var(--primary);
             display: flex;
             align-items: center;
             gap: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* SEARCH BAR STYLE */
@@ -188,7 +191,7 @@
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
             font-family: inherit;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             background-color: var(--light-bg);
             color: var(--dark);
             transition: all 0.2s ease;
@@ -223,8 +226,8 @@
             border: 1px solid var(--border);
             border-radius: 50px;
             padding: 0.4rem 0.9rem;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.8rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
         }
@@ -262,7 +265,8 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
+            font-weight: 700;
             color: var(--text-muted);
             margin-bottom: 1rem;
             text-transform: uppercase;
@@ -276,12 +280,13 @@
         }
 
         .recipe-card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.75rem;
+            font-weight: 700;
             color: var(--dark);
             margin-bottom: 1.2rem;
             cursor: pointer;
             line-height: 1.3;
+            letter-spacing: -0.5px;
         }
 
         .recipe-card-title:hover {
@@ -291,7 +296,7 @@
         .recipe-card-excerpt {
             color: var(--text-main);
             margin-bottom: 1.5rem;
-            font-size: 1rem;
+            font-size: 0.95rem;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
@@ -309,7 +314,7 @@
             background-color: #FAF4D3;
             color: #70580F;
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
             padding: 0.25rem 0.75rem;
             border-radius: 50px;
         }
@@ -318,18 +323,63 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-weight: 800;
+            font-size: 0.85rem;
             color: var(--accent);
             text-decoration: none;
             transition: color 0.2s ease;
             background: none;
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .read-more-btn:hover {
             color: var(--primary-dark);
+        }
+
+        /* PAGINATION CONTROLS */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .pagination-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        .pagination-btn:hover:not(:disabled) {
+            background-color: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .page-indicator {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-muted);
         }
 
         /* SINGLE RECIPE VIEW */
@@ -353,13 +403,15 @@
             gap: 0.5rem;
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 2rem;
             transition: color 0.2s ease;
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .back-link:hover {
@@ -367,11 +419,12 @@
         }
 
         .single-recipe h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.3rem;
+            font-weight: 800;
             color: var(--dark);
             margin-bottom: 1rem;
             line-height: 1.2;
+            letter-spacing: -0.5px;
         }
 
         .recipe-details-grid {
@@ -391,13 +444,14 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
             color: var(--dark);
             margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
             gap: 0.6rem;
+            letter-spacing: -0.3px;
         }
 
         /* INGREDIENTS LIST */
@@ -415,7 +469,8 @@
         .ingredients-list li {
             padding: 0.6rem 0;
             border-bottom: 1px dashed var(--border);
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.9rem;
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
@@ -439,6 +494,7 @@
             position: relative;
             padding-left: 3rem;
             margin-bottom: 1.8rem;
+            font-size: 0.95rem;
         }
 
         .prep-steps li::before {
@@ -451,8 +507,8 @@
             height: 28px;
             background-color: var(--primary);
             color: var(--accent);
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-weight: 800;
+            font-size: 0.85rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -463,7 +519,7 @@
             counter-reset: step-counter;
         }
 
-        /* ABOUT PAGE & STATIC PAGES */
+        /* STATIC PAGES & ALL RECIPES DIRECTORY */
         .static-page {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
@@ -473,16 +529,54 @@
         }
 
         .static-page h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+            font-weight: 800;
             color: var(--dark);
             margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
         }
 
         .static-page p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 1.5rem;
             color: var(--text-main);
+        }
+
+        /* ALL RECIPES COMPONENT LIST */
+        .directory-list {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .directory-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background-color: var(--light-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .directory-item:hover {
+            border-color: var(--accent);
+            background-color: #FFF;
+            transform: translateX(4px);
+        }
+
+        .directory-title {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .directory-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         /* UTILITY CLASSES */
@@ -520,12 +614,12 @@
 
         footer p {
             color: #a0aec0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         footer .credits {
             margin-top: 1rem;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #718096;
         }
 
@@ -535,7 +629,7 @@
                 background: white;
                 color: black;
             }
-            header, nav, aside, footer, .back-link, .search-container {
+            header, nav, aside, footer, .back-link, .search-container, .pagination-container {
                 display: none !important;
             }
             .app-container {
@@ -571,7 +665,10 @@
     <!-- Navigation Menu -->
     <nav>
         <a href="#" id="nav-home" class="active" onclick="navigateTo(''); return false;">
-            <i class="fa-solid fa-utensils"></i> Recepti
+            <i class="fa-solid fa-utensils"></i> Početna
+        </a>
+        <a href="#" id="nav-all" onclick="navigateTo('svi-recepti'); return false;">
+            <i class="fa-solid fa-book-open"></i> Svi recepti
         </a>
         <a href="#o-kuvaru" id="nav-about" onclick="navigateTo('o-kuvaru'); return false;">
             <i class="fa-solid fa-circle-info"></i> O kuvaru
@@ -584,15 +681,38 @@
         <!-- Left Side: Dynamic Content Engine -->
         <main>
             
-            <!-- VIEW: Feed Page (Home) -->
+            <!-- VIEW: Feed Page (Home with Pagination) -->
             <div id="view-feed">
                 <div class="recipe-feed" id="feed-container">
                     <!-- Recipes will be dynamically injected here -->
                 </div>
+                
+                <!-- Pagination Controls for browsing older recipes -->
+                <div class="pagination-container" id="pagination-controls">
+                    <button class="pagination-btn" id="btn-prev" onclick="changePage(-1)">
+                        <i class="fa-solid fa-chevron-left"></i> Noviji recepti
+                    </button>
+                    <span class="page-indicator" id="page-number">Strana 1</span>
+                    <button class="pagination-btn" id="btn-next" onclick="changePage(1)">
+                        Stariji recepti <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
                 <div class="no-results hidden" id="feed-empty">
                     <i class="fa-solid fa-face-frown"></i>
                     <h3>Nismo pronašli nijedan recept</h3>
                     <p>Pokušajte da pretražite sa nekim drugim ključnim rečima.</p>
+                </div>
+            </div>
+
+            <!-- VIEW: All Recipes Directory -->
+            <div id="view-all-recipes" class="hidden">
+                <div class="static-page">
+                    <h2>Svi recepti na jednom mestu</h2>
+                    <p>Kompletna arhiva naših porodičnih recepata poređana hronološki. Kliknite na bilo koji naziv da otvorite kompletan recept.</p>
+                    <div class="directory-list" id="directory-container">
+                        <!-- Full directory injected here -->
+                    </div>
                 </div>
             </div>
 
@@ -639,7 +759,7 @@
             <!-- Mini Description Card -->
             <div class="sidebar-card">
                 <h3><i class="fa-solid fa-heart"></i> Naša Misija</h3>
-                <p style="font-size: 0.9rem; color: var(--text-main);">Kratki, provereni i praktični recepti za jela koja donose radost za stolom.</p>
+                <p style="font-size: 0.85rem; color: var(--text-main); font-weight: 500;">Kratki, provereni i praktični recepti za jela koja donose radost za stolom.</p>
             </div>
 
         </aside>
@@ -654,23 +774,14 @@
 
     <!-- Core App Logic & Data Base -->
     <script>
-        // Full database containing every single piece of content from the original site
         const recipes = [
             {
                 "title": "Penkejk s voćem",
                 "date": "September 20, 2020",
                 "categories": ["Svi recepti"],
                 "ingredients": [
-                  "Brašno 150g",
-                  "Jaje 1",
-                  "Mleko 220ml",
-                  "Puter 30g",
-                  "Vanila pola kašičice",
-                  "Prašak za pecivo 2 kašičice",
-                  "Soda bikarbona vrlo malo",
-                  "Šećer 30g",
-                  "So malo",
-                  "Šumsko voće 150g"
+                  "Brašno 150g", "Jaje 1", "Mleko 220ml", "Puter 30g", "Vanila pola kašičice",
+                  "Prašak za pecivo 2 kašičice", "Soda bikarbona vrlo malo", "Šećer 30g", "So malo", "Šumsko voće 150g"
                 ],
                 "instructions": "Pomešaj suve sastojke u činiju – brašno, so, prašak za pecivo, šećer i sodu bikarbonu. Dodaj jaje, vanilu, istopljen puter i mleko; sjedini sve bez previše mešanja. Kad je smesa spremna, dodaj i nežno umešaj oprano, suvo šumsko voće (idealno kombinaciju borovnica i malina). Stavi tiganj podmazan uljem ili puterom na srednju vatru. Sipaj po jednu manju kutlaču smese u vreli tiganj. (u tiganj od 28cm staju 3 penkejka istovremeno). Kad se pojavi puno malih mehurića sa gornje strane penkejka, okreni ga i peci još par minuta. Penkejk je odličan i sam, ali je još bolji uz malo ugrejane nutele ili sa šlagom."
             },
@@ -679,203 +790,129 @@
                 "date": "September 20, 2020",
                 "categories": ["Svi recepti"],
                 "ingredients": [
-                  "Brašno 450g",
-                  "Puter 345g",
-                  "Beli šećer 2 kašike",
-                  "So 1 puna kašičica",
-                  "Jabukovo sirće 2 kašike",
-                  "Voda 100ml",
-                  "Jaje 1, za premazivanje",
-                  "Jabuke 1-1,2kg (fil)",
-                  "Limunov sok kašika-dve (fil)",
-                  "Braon šećer 2 kašike (fil)",
-                  "Beli šećer 1 kašika (fil)",
-                  "Gusti sok 200ml (fil)",
-                  "Cimet 1 kašičica (fil)",
-                  "Vanila 1 kašičica (fil)",
-                  "Kukuruzov skrob 1 kašičica (fil)",
-                  "Soli malo (fil)"
+                  "Brašno 450g", "Puter 345g", "Beli šećer 2 kašike", "So 1 puna kašičica", "Jabukovo sirće 2 kašike",
+                  "Voda 100ml", "Jaje 1, za premazivanje", "Jabuke 1-1,2kg (fil)", "Limunov sok kašika-dve (fil)",
+                  "Braon šećer 2 kašike (fil)", "Beli šećer 1 kašika (fil)", "Gusti sok 200ml (fil)", "Cimet 1 kašičica (fil)",
+                  "Vanila 1 kašičica (fil)", "Kukuruzov skrob 1 kašičica (fil)", "Soli malo (fil)"
                 ],
-                "instructions": "Pripremi testo. Iseci (hladni) puter na kocke i ubaci ga u multipraktik zajedno s brašnom, soli i šećerom; pulsiraj dok se ne umeša tako da i dalje ima relativno velikih grudvica putera. Prespi brašno u činiju i dodaj sirće i hladnu vodu, pa pomešaj varjačom kako se testo ne bi previše ugrejalo.formiraj dve lopte rukama i premesti ih na pobrašnjenju radnu površinu. Spljeskaj jednu od lopti, pa je iseci na četiri jednaka dela; složi ih jedne preko drugih, pa ponovo spljeskaj testo u relativno debeo disk. Ponovi postupak s drugim delom testa, umotaj oba diska u plastičnu foliju pa ih stavi u frižider da se ohlade. Pripremi fil. Jabuke oljušti i iseci na četiri dela, odvoji sredinu i iseci na tanke šnite. Pospi isečene jabuke limunom, braon i belim šećerom, solju i na kraju cimetom i sve dobro promešaj. Jabuke treba da stoje u “marinadi” oko 2 sata. Kad su jabuke već odstojale, pripremi sos. Stavi sok zajedno sa vanilom da se kuva u maloj posudi. Kad se količina tečnosti smanji za pola, dodaj sok koji su jabuke ispustile i pusti da prokuva. Kad u šerpi ostane samo oko 150ml tečnosti, dodaj skrob i pusti da se sve zgusne. Pusti da se malo ohladi, pa sipaj preko jabuka i dobro promešaj. Uzmi jedan od diskova testa i izvadi ga na radnu površinu (ako je pretvrd, ostavi ga da se malo opusti). Oklagijom ga razvuci in krug koji je bar za oko 4-5cm širi od posude za pitu koju ćeš upotrebiti. (Kako bi bilo lakše da se prenese u sud, testo se može direktno razvući na papiru za pečenje). Razvučeno testo nežno spusti u posudu za pitu, rukama ga prijanjajući za dno i strane. Pokrij sud plastičnom folijom i vrati ga u frižider. Upali rernu na 190 stepeni. Uzmi drugi disk testa iz frižidera i razvuci ga u krug koji je bar 2cmširi od posude za pitu. Izvadi posudu za pitu sa dnom iz frižidera, sipaj jabuke i prekrij sa drugim delom testa. Ravnom stranom viljuške pritiskaj po obodu tako da se testa spoje. Iseci višak testa nožem i stavi pitu u friz na 10 minuta. Izvadi pitu iz friza i premaži je izlupanim jajetom u koje je dodato malo vode. Na kraju može da se pospe i sa malo šećera. Pita se peče 1:30-2:00 sati, koliko god izdrži a da ne izgori. Dobiće vrloj intenzivnu braon boju. Pita mora sasvim da se ohladi pre sečenja!"
+                "instructions": "Pripremi testo. Iseci puter na kocke i ubaci ga u multipraktik zajedno s brašnom, soli i šećerom. Dodaj sirće i hladnu vodu, formiraj diskove i ohladi ih u frižideru. Jabuke oljušti, iseci i mariniraj u šećeru, limunu i cimetu 2 sata. Skuvaj sos od soka i skroba i pomešaj sa jabukama. Razvuci donje testo u posudu, sipaj fil, pokrij gornjim testom, premaži jajetom i peci 1.5 do 2 sata na 190 stepeni."
             },
             {
                 "title": "Chicken tikka masala s karfiolom",
                 "date": "May 17, 2020",
                 "categories": ["Glavna jela", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Pileće grudi 250-300g",
-                  "Karfiol 350g",
-                  "Jogurt 125ml",
-                  "Crvena paprika jedna",
-                  "Crni luk dve glavice",
-                  "Beli luk jedan čen",
-                  "Sos od paradajza 150ml",
-                  "Đumbir kašika, izrendan",
-                  "Čili pola kašičice",
-                  "Kumin pola kašičice",
-                  "Garam masala mešavina začina jedna kašika",
-                  "Kokosovo mleko 125ml",
-                  "Ulje"
+                  "Pileće grudi 250-300g", "Karfiol 350g", "Jogurt 125ml", "Crvena paprika jedna", "Crni luk dve glavice",
+                  "Beli luk jedan čen", "Sos od paradajza 150ml", "Đumbir kašika", "Kokosovo mleko 125ml", "Začini"
                 ],
-                "instructions": "Iseci piletinu na kockice (3-4cm). Posoli piletinu i stavi je u marinadu od jogurta, izrendanog đumbira, polovine garam masale, čilija, i usitnjenog belog luka. Stavi u frižider na sat-dva, a može i preko noći. Iseci karfiol na “zalogaje”. Krupno iseci luk i papriku. Zagrej široki tiganj sa malo ulja (da pokrije dno) i proprži povrće dok ne postane zlatno. Kad je povrće skoro sasvim spremno, dodaj piletinu i proprži je (ako ostane marinade kad je izvadis, nemoj da bacis). Kad i ona zarumeni, dodaj kumin i ostatak garam masale, pa proprži minut-dva. U tiganj sipaj sos od paradajza i ostatak marinade. Zagrej do ključanja, poklopi i smanji vakru tako da se tiho krčka. Ostavi 15 minuta. Na kraju sipaj kokosovo mleko u jelo. Ako sos izgleda malo “tanko”, izdvoji deo sosa i malo povrća, izblendaj štapnim mikserom dok ne dobiješ gust i gladak sos, pa vrati u jelo. Chicken tikka masala je super sa naanom."
+                "instructions": "Iseci piletinu i mariniraj je u jogurtu, đumbiru, belom luku i začinima. Isprži luk, papriku i karfiol, pa dodaj piletinu. Sipaj paradajz sos i krčkaj 15 minuta. Na kraju dodaj kokosovo mleko."
             },
             {
                 "title": "Burger od tune",
                 "date": "May 17, 2020",
                 "categories": ["Glavna jela", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Tuna 180g",
-                  "Stari hleb 40g",
-                  "Mladi luk zeleni deo jednog",
-                  "Gauda dva lista",
-                  "Kukuruz 80g",
-                  "Jaje jedno",
-                  "Maslinovo ulje",
-                  "So"
+                  "Tuna 180g", "Stari hleb 40g", "Mladi luk", "Gauda dva lista", "Kukuruz 80g", "Jaje jedno", "Maslinovo ulje"
                 ],
-                "instructions": "Ocedi tunu. Stari hleb usitni u secku. Mladi luk sitno iseckaj, kao i gaudu. Stavi kukuruz u secka i kratko blendaj, tako da ostane vecih komada kukuruza. U činiji pomešaj sve sastojke osim maslinovog ulja. Rukama oblikuj dva burgera i peci ih na malo maslinovog ulja u nelepljivom tiganju. Okreni jednom (nije lako)."
+                "instructions": "Ocedi tunu. Stari hleb usitni, kao i mladi luk i sir. Izblendaj kukuruz kratko. Pomešaj sve sastojke u činiji, oblikuj burgere i peci na maslinovom ulju u tiganju sa obe strane."
             },
             {
                 "title": "Pečeno pile",
                 "date": "May 17, 2020",
                 "categories": ["Glavna jela", "Rerna", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Pile jedno, 1-2kg",
-                  "Limun jedan",
-                  "Ruzmarin grančica",
-                  "Biber",
-                  "So"
+                  "Pile jedno, 1-2kg", "Limun jedan", "Ruzmarin grančica", "Biber", "So"
                 ],
-                "instructions": "Zagrej rernu na 180 stepeni. Operi limun, malo ga zgnječi rolajući ga po radnoj površini i izbockaj ga nekoliko puta viljuškom. Uzmi pile i utrljaj so i biber po koži. Ubaci celi limun i grančicu ruzmarina u pile, pa ga “zatvori” koncem ili čačkalicama. Položi pile grudima na dole u tepsiju i stavi ga u rernu na 30 minuta. Posle 30 minuta, okreni pile i vrati ga u rernu. U zavisnosti od veličine mu treba još 20-30 minuta na 180 stepeni; na kraju pojačaj na 220 i ostavi da se zapeče 20 minuta."
+                "instructions": "Zagrej rernu na 180 stepeni. Utrljaj so i biber u kožu pileta. Ubaci celi izbušeni limun i ruzmarin unutar pileta. Peci grudima na dole 30 minuta, okreni, pa peci još 30 minuta. Na kraju zapecite na 220 stepeni."
             },
             {
                 "title": "Pečeno povrće",
                 "date": "May 14, 2020",
                 "categories": ["Bez mesa", "Glavna jela", "Rerna", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Paprika",
-                  "Karfiol",
-                  "Krompir",
-                  "Tikvice",
-                  "Čenovi belog luka",
-                  "Paradajz",
-                  "Prokelj",
-                  "Crni luk",
-                  "Šampinjoni",
-                  "Maslinovo ulje",
-                  "So"
+                  "Paprika", "Karfiol", "Krompir", "Tikvice", "Beli luk", "Paradajz", "Maslinovo ulje", "So"
                 ],
-                "instructions": "Povrće koje se duže peče (krompir, karfiol, prokelj, crni luk ako je krupno isečen, čenovi belog luka) iseci, pomešaj ga sa uljem i posoli, pa rasporedi u tepsiju i stavi ga da se peče na 220 stepeni 20-25 minuta. U međuvremenu spremi ostatak povrća, pomešaj sa uljem i posoli. Izvadi tepsiju i dodaj novo povrće, sve promešaj zajedno u tepsiju i vrati je u rernu na još 30-40 minuta. Povrće je gotovo kad izgleda kako treba."
+                "instructions": "Krompir i karfiol iseci, naulji, posoli i peci na 220 stepeni oko 20 minuta. Zatim dodaj mekše povrće (tikvice, papriku), promešaj i peci sve zajedno još 30-40 minuta."
             },
             {
                 "title": "Lazanja",
                 "date": "May 14, 2020",
                 "categories": ["Glavna jela", "Rerna", "Slano", "Svi recepti", "Testenina"],
                 "ingredients": [
-                  "Ragù 500g",
-                  "Sveže kore za lazanje 250-300g",
-                  "Parmezan 150g",
-                  "Puter 50g",
-                  "Brašno 50g",
-                  "Mleko 500ml",
-                  "Muškatni oraščić",
-                  "So"
+                  "Ragù 500g", "Sveže kore 250g", "Parmezan 150g", "Puter 50g", "Brašno 50g", "Mleko 500ml", "Muškatni oraščić"
                 ],
-                "instructions": "Zagrej rernu na 200 stepeni. Pripremi bešamel: Zagrej mleko. Istopi puter u tiganju, pa dodaj brašno i prži ga dok ne počne lepo da miriše, pa počni da dodaješ toplo mleko malo po malo, energično mešajući tako da brašno homogeno upije mleko. Bešamel posoli i dodaj muškatnog oraščića po ukusu (dosta). Pripremi tepsiju. Tepsiju zamasti puterom, pa na dno stavi ravnomerni tanki sloj bešamela. Složi kore za lazanju, pa dodaj ragù, pa sloj bešamela, pa dosta narendanog parmezana; ponovi postupak dok ne potrošiš sve. Poslednji sloj treba da bude kora, koju treba prekriti samo bešamelom i parmezanom. Lazanju prekrij aluminijom i ubaci je u rernu; posle 15 minuta otkrij lazanju i pusti gornji deo da se dobro zapeče."
+                "instructions": "Napravi bešamel sos od putera, brašna, mleka i muškatnog oraščića. U tepsiju ređaj bešamel, kore, ragu sos i parmezan. Završi slojem bešamela i sira, pokrij folijom i peci 15 minuta na 200 stepeni, pa još malo otkriveno."
             },
             {
                 "title": "Polpette",
                 "date": "May 14, 2020",
                 "categories": ["Glavna jela", "Rerna", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Mešano mleveno meso 200g",
-                  "Stari hleb 70g",
-                  "Jaje 1",
-                  "Parmezan 70g",
-                  "Žalfija dva lista",
-                  "So",
-                  "Biber"
+                  "Mleveno meso 200g", "Stari hleb 70g", "Jaje 1", "Parmezan 70g", "Žalfija", "So", "Biber"
                 ],
-                "instructions": "Izrendaj parmezan. Stari hleb stavi u secka i usitni. Žalfiju iscepkaj. Pomešaj dobro sve sastojke rukama; ako možeš, ostavi polpette u frižideru nekoliko sati. Pravi kuglice prečnika 3-4cm rukama i složi ih u tepsiju; peci ih u rernu 30min na 200 stepeni, ili dok ne dobiju lepu braon boju. Alternativno, polpette se mogu pržiti u tiganju na puteru na srednjoj vatri."
+                "instructions": "Pomešaj mleveno meso, usitnjeni hleb, jaje, parmezan i začine. Oblikuj kuglice od 3-4cm i peci ih u rerni na 200 stepeni oko 30 minuta dok ne porumene."
             },
             {
                 "title": "Cacio e pepe",
                 "date": "May 14, 2020",
                 "categories": ["Bez mesa", "Glavna jela", "Slano", "Svi recepti", "Testenina"],
                 "ingredients": [
-                  "Špagete (idealno sveže, beige) 250g",
-                  "Dobar stari pekorino 100g",
-                  "Biber",
-                  "So"
+                  "Špagete 250g", "Pekorino sir 100g", "Biber", "So"
                 ],
-                "instructions": "Stavi veliku šerpu punu slane vode da se greje. Izrendaj pekorino i dodaj mu dosta bibera. Stavi pastu da kuva, pazeći da se ne prekuva. Kad je pasta pri kraju, uzmi punu čašu vode u kojoj se kuvala i stavi sa strane. Ocedi pastu pa je vrati u šerpu. Vrelu vodu iz paste dodaj malo po malo u pekorino, energično mešajući. Kad sir postane vrlo kremast, dodaj još malo vode pa sipaj sve u šerpu sa gotovom pastom; stavi šerpu na vatru i dobro promešaj sve 2-3 minuta kako bi se pasta sjedinila sa sosom."
+                "instructions": "Skuvaj špagete u slanoj vodi. Narendaj pekorino i pomešaj sa dosta mlevenog bibera. Sačuvaj šolju tople vode od kuvanja testenine, dodaj je u sir da napraviš krem, pa sve sjedini sa toplom pastom na vatri."
             },
             {
                 "title": "Tortilja sa povrćem i sirom",
                 "date": "May 14, 2020",
                 "categories": ["Bez mesa", "Glavna jela", "Rerna", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Tortilje 4",
-                  "Crvena paprika pola",
-                  "Crni luk pola",
-                  "Tikvice jedna manja",
-                  "Ljubičasti pasulj jedna konzerva",
-                  "Gauda 4 lista",
-                  "Beli stariji sir po ukusu",
-                  "Maslinovo ulje",
-                  "So"
+                  "Tortilje 4", "Paprika", "Crni luk", "Tikvice", "Pasulj iz konzerve", "Gauda", "Beli sir", "Ulje"
                 ],
-                "instructions": "Zagrej rernu na 200 stepeni. Pripremi smesu: sipaj ulja tako da prekrije dno šireg nelepljivog tiganja i upali na srednje-jaku vatru. Iseckaj paprike julienne, luk na tanke kriške, tikvice na kolutove i sve isprži dok ne zarumeni. Na kraju dodaj i isprani pasulj. Kad skineš s vatre umešaj malo starog belog sira. Svaku tortilju zamasti sa spoljne strane. Sa unutrašnje strane stavi list gaude, pa dodaj nekoliko kašika povrća. Tortilje savij sa 3 strane tako da dobiješ “fišek”; fiksiraj ih čačkalicom i spusti u nelepljivu tepsiju. Peci tortilje dok ne dobiju lepu zlatnu boju."
+                "instructions": "Isprži papriku, luk i tikvice na tiganju, pa dodaj pasulj i beli sir. Svaku tortilju napuni povrćem i listom gauda sira, savij u fišek, učvrsti čačkalicom i zapeci u rerni na 200 stepeni."
             },
             {
                 "title": "Tortilje sa piletinom i avokadom",
                 "date": "May 14, 2020",
                 "categories": ["Glavna jela", "Sendvič", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Pečeno pile pola",
-                  "Avokado 1",
-                  "Tortilje 4",
-                  "Jogurt 120ml",
-                  "Gauda 4 lista",
-                  "Paradajz 250g",
-                  "Crveni luk pola male glavice",
-                  "Sok od limuna",
-                  "Maslinovo ulje",
-                  "So"
+                  "Pečeno pile pola", "Avokado 1", "Tortilje 4", "Jogurt 120ml", "Gauda", "Paradajz", "Crveni luk"
                 ],
-                "instructions": "Pripremi salsu: sitno iseckaj paradajz i crveni luk. Stavi sve u činiju, začini uljem, soljem i sokom od limuna i stavi u frižider. Pripremi punjenje za tortilje: odvoji piletinu od kostiju, skloni kožu i iseci je na kockice. Iseci avokado na kocke slične veličine. Pomešaj piletinu i avokado sa jogurtom i malo ulja. Zagrej tiganj za tortilje. Stavi tortilju u tiganj. Kad je okreneš, stavi jedan list gaude na sredinu kako bi se istopio. Izvadi tortilju i napuni je smesom za punjenje, pa je umotaj. Tortilja se jede uz hladnu salsu."
+                "instructions": "Napravi salsu od sitno seckanog paradajza, crvenog luka i limuna. Piletinu i avokado iseci na kockice i pomešaj sa jogurtom. Zagrej tortilje sa sirom, napuni smesom i posluži uz hladnu salsu."
             },
             {
-                "title": "Krostini sa grilovanim tikvicama i dimljenim sirom",
+                "title": "Krostini sa tikvicama",
                 "date": "May 14, 2020",
                 "categories": ["Bez mesa", "Predjela i Prilozi", "Rerna", "Slano", "Svi recepti"],
                 "ingredients": [
-                  "Baget 250g",
-                  "Tikvice 2 komada",
-                  "Dimljeni sir 150g",
-                  "Maslinovo ulje",
-                  "So"
+                  "Baget 250g", "Tikvice 2 komada", "Dimljeni sir 150g", "Maslinovo ulje", "So"
                 ],
                 "instructions": "Isecite tikvice na kolutove i izgrilujte ih na tiganju. Baget isecite na kriške, poređajte tikvice i komade dimljenog sira preko. Pecite u rerni na 200 stepeni dok se sir ne rastopi."
             }
         ];
 
-        // App state
+        // State Management
         let currentCategory = 'Svi recepti';
         let searchQuery = '';
+        let currentPage = 1;
+        const recipesPerPage = 4; // Broj recepata koji se prikazuju po stranici na početnoj
 
-        // Router
         function navigateTo(view) {
             document.getElementById('view-feed').classList.add('hidden');
             document.getElementById('view-recipe').classList.add('hidden');
             document.getElementById('view-about').classList.add('hidden');
+            document.getElementById('view-all-recipes').classList.add('hidden');
             
             document.getElementById('nav-home').classList.remove('active');
+            document.getElementById('nav-all').classList.remove('active');
             document.getElementById('nav-about').classList.remove('active');
 
             if (view === 'o-kuvaru') {
                 document.getElementById('view-about').classList.remove('hidden');
                 document.getElementById('nav-about').classList.add('active');
+            } else if (view === 'svi-recepti') {
+                renderDirectory();
+                document.getElementById('view-all-recipes').classList.remove('hidden');
+                document.getElementById('nav-all').classList.add('active');
             } else if (view.startsWith('recipe-')) {
                 const idx = view.split('-')[1];
                 renderSingleRecipe(idx);
@@ -883,22 +920,31 @@
             } else {
                 document.getElementById('view-feed').classList.remove('hidden');
                 document.getElementById('nav-home').classList.add('active');
+                currentPage = 1; // resetuj stranu kod povratka
                 renderFeed();
             }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Search engine
         function handleSearch(query) {
             searchQuery = query.toLowerCase();
+            currentPage = 1; // Pretraga uvek vraća na prvu stranu rezultata
             renderFeed();
         }
 
-        // Render Homepage Feed
+        function changePage(direction) {
+            currentPage += direction;
+            renderFeed();
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+
         function renderFeed() {
             const container = document.getElementById('feed-container');
             const emptyState = document.getElementById('feed-empty');
+            const paginationControls = document.getElementById('pagination-controls');
             container.innerHTML = '';
 
+            // Filtriranje elemenata prema kategoriji i pretrazi
             const filtered = recipes.filter(recipe => {
                 const matchesCategory = recipe.categories.includes(currentCategory);
                 const matchesSearch = recipe.title.toLowerCase().includes(searchQuery) || 
@@ -908,38 +954,79 @@
 
             if (filtered.length === 0) {
                 emptyState.classList.remove('hidden');
+                paginationControls.classList.add('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            paginationControls.classList.remove('hidden');
+
+            // Izračunavanje indeksa za trenutnu stranicu (paginaciju)
+            const totalPages = Math.ceil(filtered.length / recipesPerPage);
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+
+            const startIndex = (currentPage - 1) * recipesPerPage;
+            const endIndex = startIndex + recipesPerPage;
+            const paginatedItems = filtered.slice(startIndex, endIndex);
+
+            // Renderovanje isečka recepata
+            paginatedItems.forEach(recipe => {
+                const globalIdx = recipes.indexOf(recipe);
+                const card = document.createElement('div');
+                card.className = 'recipe-card';
+                card.innerHTML = `
+                    <div class="recipe-card-meta">
+                        <span><i class="fa-solid fa-calendar"></i> ${recipe.date}</span>
+                    </div>
+                    <h2 class="recipe-card-title" onclick="navigateTo('recipe-${globalIdx}')">${recipe.title}</h2>
+                    <p class="recipe-card-excerpt">${recipe.instructions}</p>
+                    <div class="recipe-card-tags">
+                        ${recipe.categories.map(cat => `<span class="recipe-card-tag">${cat}</span>`).join('')}
+                    </div>
+                    <button class="read-more-btn" onclick="navigateTo('recipe-${globalIdx}')">
+                        Pročitaj recept <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+
+            // Kontrola izgleda dugmića za navigaciju unazad/unapred
+            document.getElementById('page-number').innerText = `Strana ${currentPage} od ${totalPages}`;
+            document.getElementById('btn-prev').disabled = (currentPage === 1);
+            document.getElementById('btn-next').disabled = (currentPage === totalPages);
+            
+            if(totalPages <= 1) {
+                paginationControls.classList.add('hidden');
             } else {
-                emptyState.classList.add('hidden');
-                filtered.forEach(recipe => {
-                    const globalIdx = recipes.indexOf(recipe);
-                    const card = document.createElement('div');
-                    card.className = 'recipe-card';
-                    card.innerHTML = `
-                        <div class="recipe-card-meta">
-                            <span><i class="fa-solid fa-calendar"></i> ${recipe.date}</span>
-                        </div>
-                        <h2 class="recipe-card-title" onclick="navigateTo('recipe-${globalIdx}')">${recipe.title}</h2>
-                        <p class="recipe-card-excerpt">${recipe.instructions}</p>
-                        <div class="recipe-card-tags">
-                            ${recipe.categories.map(cat => `<span class="recipe-card-tag">${cat}</span>`).join('')}
-                        </div>
-                        <button class="read-more-btn" onclick="navigateTo('recipe-${globalIdx}')">
-                            Pročitaj recept <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    `;
-                    container.appendChild(card);
-                });
+                paginationControls.classList.remove('hidden');
             }
         }
 
-        // Render Details Page
+        // Renderuje novu stranicu sa celim direktorijumom/arhivom recepata
+        function renderDirectory() {
+            const container = document.getElementById('directory-container');
+            container.innerHTML = '';
+            
+            recipes.forEach((recipe, idx) => {
+                const item = document.createElement('div');
+                item.className = 'directory-item';
+                item.onclick = () => navigateTo(`recipe-${idx}`);
+                item.innerHTML = `
+                    <span class="directory-title"><i class="fa-solid fa-cookie"></i> ${recipe.title}</span>
+                    <span class="directory-meta">${recipe.date}</span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
         function renderSingleRecipe(index) {
             const container = document.getElementById('recipe-container');
             const recipe = recipes[index];
             
             container.innerHTML = `
                 <button class="back-link" onclick="navigateTo('')">
-                    <i class="fa-solid fa-arrow-left"></i> Nazad na recepte
+                    <i class="fa-solid fa-arrow-left"></i> Nazad na početnu
                 </button>
                 <h2>${recipe.title}</h2>
                 <div class="recipe-card-meta" style="margin-top: 1rem; margin-bottom: 2rem;">
@@ -962,7 +1049,6 @@
             `;
         }
 
-        // Initialize dynamic categories sidebar
         function initCategories() {
             const categorySet = new Set();
             recipes.forEach(r => r.categories.forEach(c => categorySet.add(c)));
@@ -978,13 +1064,13 @@
                     document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
                     pill.classList.add('active');
                     currentCategory = cat;
+                    currentPage = 1;
                     renderFeed();
                 };
                 container.appendChild(pill);
             });
         }
 
-        // Start execution
         window.onload = () => {
             initCategories();
             renderFeed();
