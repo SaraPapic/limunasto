@@ -774,168 +774,323 @@
     <!-- Core App Logic & Data Base -->
     <script>
         const recipes = [
-            {
-                "title": "Penkejk s voćem",
-                "date": "September 20, 2020",
-                "categories": ["Svi recepti"],
-                "ingredients": [
-                  "Brašno 150g", "Jaje 1", "Mleko 220ml", "Puter 30g", "Vanila pola kašičice",
-                  "Prašak za pecivo 2 kašičice", "Soda bikarbona vrlo malo", "Šećer 30g", "So malo", "Šumsko voće 150g"
-                ],
-                "instructions": "Pomešaj suve sastojke u činiju – brašno, so, prašak za pecivo, šećer i sodu bikarbonu. Dodaj jaje, vanilu, istopljen puter i mleko; sjedini sve bez previše mešanja. Kad je smesa spremna, dodaj i nežno umešaj oprano, suvo šumsko voće (idealno kombinaciju borovnica i malina). Stavi tiganj podmazan uljem ili puterom na srednju vatru. Sipaj po jednu manju kutlaču smese u vreli tiganj. (u tiganj od 28cm staju 3 penkejka istovremeno). Kad se pojavi puno malih mehurića sa gornje strane penkejka, okreni ga i peci još par minuta. Penkejk je odličan i sam, ali je još bolji uz malo ugrejane nutele ili sa šlagom."
-            },
-            {
-                "title": "Američka pita s jabukama",
-                "date": "September 20, 2020",
-                "categories": ["Svi recepti"],
-                "ingredients": [
-                  "Brašno 450g", "Puter 345g", "Beli šećer 2 kašike", "So 1 puna kašičica", "Jabukovo sirće 2 kašike",
-                  "Voda 100ml", "Jaje 1, za premazivanje", "Jabuke 1-1,2kg (fil)", "Limunov sok kašika-dve (fil)",
-                  "Braon šećer 2 kašike (fil)", "Beli šećer 1 kašika (fil)", "Gusti sok 200ml (fil)", "Cimet 1 kašičica (fil)",
-                  "Vanila 1 kašičica (fil)", "Kukuruzov skrob 1 kašičica (fil)", "Soli malo (fil)"
-                ],
-                "instructions": "Pripremi testo. Iseci puter na kocke i ubaci ga u multipraktik zajedno s brašnom, soli i šećerom. Dodaj sirće i hladnu vodu, formiraj diskove i ohladi ih u frižideru. Jabuke oljušti, iseci i mariniraj u šećeru, limunu i cimetu 2 sata. Skuvaj sos od soka i skroba i pomešaj sa jabukama. Razvuci donje testo u posudu, sipaj fil, pokrij gornjim testom, premaži jajetom i peci 1.5 do 2 sata na 190 stepeni."
-            },
-            {
-                "title": "Chicken tikka masala s karfiolom",
-                "date": "May 17, 2020",
-                "categories": ["Glavna jela", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Pileće grudi 250-300g", "Karfiol 350g", "Jogurt 125ml", "Crvena paprika jedna", "Crni luk dve glavice",
-                  "Beli luk jedan čen", "Sos od paradajza 150ml", "Đumbir kašika", "Kokosovo mleko 125ml", "Začini"
-                ],
-                "instructions": "Iseci piletinu i mariniraj je u jogurtu, đumbiru, belom luku i začinima. Isprži luk, papriku i karfiol, pa dodaj piletinu. Sipaj paradajz sos i krčkaj 15 minuta. Na kraju dodaj kokosovo mleko."
-            },
-            {
-                "title": "Burger od tune",
-                "date": "May 17, 2020",
-                "categories": ["Glavna jela", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Tuna 180g", "Stari hleb 40g", "Mladi luk", "Gauda dva lista", "Kukuruz 80g", "Jaje jedno", "Maslinovo ulje"
-                ],
-                "instructions": "Ocedi tunu. Stari hleb usitni, kao i mladi luk i sir. Izblendaj kukuruz kratko. Pomešaj sve sastojke u činiji, oblikuj burgere i peci na maslinovom ulju u tiganju sa obe strane."
-            },
-            {
-                "title": "Pečeno pile",
-                "date": "May 17, 2020",
-                "categories": ["Glavna jela", "Rerna", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Pile jedno, 1-2kg", "Limun jedan", "Ruzmarin grančica", "Biber", "So"
-                ],
-                "instructions": "Zagrej rernu na 180 stepeni. Utrljaj so i biber u kožu pileta. Ubaci celi izbušeni limun i ruzmarin unutar pileta. Peci grudima na dole 30 minuta, okreni, pa peci još 30 minuta. Na kraju zapecite na 220 stepeni."
-            },
-            {
-                "title": "Pečeno povrće",
-                "date": "May 14, 2020",
-                "categories": ["Bez mesa", "Glavna jela", "Rerna", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Paprika", "Karfiol", "Krompir", "Tikvice", "Beli luk", "Paradajz", "Maslinovo ulje", "So"
-                ],
-                "instructions": "Krompir i karfiol iseci, naulji, posoli i peci na 220 stepeni oko 20 minuta. Zatim dodaj mekše povrće (tikvice, papriku), promešaj i peci sve zajedno još 30-40 minuta."
-            },
-            {
-                "title": "Lazanja",
-                "date": "May 14, 2020",
-                "categories": ["Glavna jela", "Rerna", "Slano", "Svi recepti", "Testenina"],
-                "ingredients": [
-                  "Ragù 500g", "Sveže kore 250g", "Parmezan 150g", "Puter 50g", "Brašno 50g", "Mleko 500ml", "Muškatni oraščić"
-                ],
-                "instructions": "Napravi bešamel sos od putera, brašna, mleka i muškatnog oraščića. U tepsiju ređaj bešamel, kore, ragu sos i parmezan. Završi slojem bešamela i sira, pokrij folijom i peci 15 minuta na 200 stepeni, pa još malo otkriveno."
-            },
-            {
-                "title": "Polpette",
-                "date": "May 14, 2020",
-                "categories": ["Glavna jela", "Rerna", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Mleveno meso 200g", "Stari hleb 70g", "Jaje 1", "Parmezan 70g", "Žalfija", "So", "Biber"
-                ],
-                "instructions": "Pomešaj mleveno meso, usitnjeni hleb, jaje, parmezan i začine. Oblikuj kuglice od 3-4cm i peci ih u rerni na 200 stepeni oko 30 minuta dok ne porumene."
-            },
-            {
-                "title": "Cacio e pepe",
-                "date": "May 14, 2020",
-                "categories": ["Bez mesa", "Glavna jela", "Slano", "Svi recepti", "Testenina"],
-                "ingredients": [
-                  "Špagete 250g", "Pekorino sir 100g", "Biber", "So", "Skrob (od krompira ili kukuruza)"
-                ],
-                "instructions": "Skuvaj špagete u slanoj vodi. Narendaj pekorino i pomešaj sa dosta mlevenog bibera; dodaj kašičicu skroba u sir. Sačuvaj šolju vode od kuvanja testenine; kad se ohladi, dodaj je u sir da napraviš krem, pa sve sjedini sa toplom pastom. Sir ne sme da se previše zagreje jer će koagulisati (već oko 72 stepena!)"
-            },
-            {
-                "title": "Tortilja sa povrćem i sirom",
-                "date": "May 14, 2020",
-                "categories": ["Bez mesa", "Glavna jela", "Rerna", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Tortilje 4", "Paprika", "Crni luk", "Tikvice", "Pasulj iz konzerve", "Gauda", "Beli sir", "Ulje"
-                ],
-                "instructions": "Isprži papriku, luk i tikvice na tiganju, pa dodaj pasulj i beli sir. Svaku tortilju napuni povrćem i listom gauda sira, savij u fišek, učvrsti čačkalicom i zapeci u rerni na 200 stepeni."
-            },
-            {
-                "title": "Tortilje sa piletinom i avokadom",
-                "date": "May 14, 2020",
-                "categories": ["Glavna jela", "Sendvič", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Pečeno pile pola", "Avokado 1", "Tortilje 4", "Jogurt 120ml", "Gauda", "Paradajz", "Crveni luk"
-                ],
-                "instructions": "Napravi salsu od sitno seckanog paradajza, crvenog luka i limuna. Piletinu i avokado iseci na kockice i pomešaj sa jogurtom. Zagrej tortilje sa sirom, napuni smesom i posluži uz hladnu salsu."
-            },
-            {
-                "title": "Krostini sa tikvicama",
-                "date": "May 14, 2020",
-                "categories": ["Bez mesa", "Predjela i Prilozi", "Rerna", "Slano", "Svi recepti"],
-                "ingredients": [
-                  "Baget 250g", "Tikvice 2 komada", "Dimljeni sir 150g", "Maslinovo ulje", "So"
-                ],
-                "instructions": "Isecite tikvice na kolutove i izgrilujte ih na tiganju. Baget isecite na kriške, poređajte tikvice i komade dimljenog sira preko. Pecite u rerni na 200 stepeni dok se sir ne rastopi."
-            }
+          [
+  {
+    "title": "Tortilje sa piletinom i avokadom",
+    "date": "May 14, 2020",
+    "categories": ["Glavna jela", "Sendvič", "Slano", "Svi recepti"],
+    "ingredients": [
+      "Pečeno pile pola",
+      "Avokado 1",
+      "Tortilje 4",
+      "Jogurt 120ml",
+      "Gauda 4 lista",
+      "Paradajz 250g",
+      "Crveni luk pola male glavice",
+      "Sok od limuna",
+      "Maslinovo ulje",
+      "So"
+    ],
+    "instructions": "Pripremi salsu: sitno iseckaj paradajz i crveni luk. Stavi sve u činiju, začini uljem, soljem i sokom od limuna i stavi u frižider. Pripremi punjenje za tortilje: odvoji piletinu od kostiju, skloni kožu i iseci je na kockice. Iseci avokado na kocke slične veličine. Pomešaj piletinu i avokado sa jogurtom i malo ulja. Zagrej tiganj za tortilje. Stavi tortilju u tiganj. Kad je okreneš, stavi jedan list gaude na sredinu kako bi se istopio. Izvadi tortilju i napuni je smesom za punjenje, pa je umotaj. Tortilja se jede uz hladnu salsu."
+  },
+  {
+    "title": "Krostini sa grilovanim tikvicama i dimljenim sirom",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Predjela i Prilozi", "Rerna", "Slano", "Svi recepti"],
+    "ingredients": [
+      "Baget 250g",
+      "Tikvice 300-400g",
+      "Dimljeni žuti sir (scamorza) 200g",
+      "Maslinovo ulje",
+      "Krupna so"
+    ],
+    "instructions": "Iseci hleb na kolutove i stavi ga na tepsiju da se zapeče u rerni na 200 stepeni. U međuvremenu, iseci tikvice na tanke kriške po dužini. Tikvice posoli i zamasti sa malo maslinovog ulja, pa ih ispeci na gril tiganju. Kriške hleba izvadi iz rerne, pa ih okreni tako da im mekša strana bude gore; na tu stranu stavi dimljeni sir. Vrati hleb u rernu i pusti da se sir istopi. Kad je sir istopljen, izvadi tepsiju i naslaži tikvice na svaki komad hleba."
+  },
+  {
+    "title": "Sladoled od pistaća",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 200ml",
+      "Šećer 90g",
+      "Pistaći, oljušteni 100g",
+      "Brašno od rogača za zgušnjavanje 5g",
+      "So"
+    ],
+    "instructions": "Napravi puter od pistaća: ako su ti pistaći u ljusci, oljušti ih i odokativno im skloni i “kožu”, tako da budu što zeleniji. Pistaće stavi u secka i blendaj, uz pauze, dok ne dobiješ gust krem. Ovo je lakše ako su pistaći topli. Sa strane zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj tako da nestanu sve grudvice. U mleko dodaj šećer i puter od pistaća i dobro promešaj. Na kraju dodaj malo soli i pavlaku za šlag, pa izblendaj sve štapnim mikserom. Stavi smesu da se hladi u frižideru bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled od lešnika",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 200ml",
+      "Šećer 90g",
+      "Pečeni oljušteni lešnici 100g",
+      "Brašno od rogača za zgušnjavanje 5g",
+      "So",
+      "Vanila"
+    ],
+    "instructions": "Napravi puter od lešnika: lešnike stavi u secka i blendaj, uz pauze, dok ne dobiješ tečan krem. Ovo je lakše ako su lešnici topli. Sa strane zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj tako da nestanu sve grudvice. U mleko dodaj šećer i puter od lešnika i dobro promešaj. Na kraju dodaj malo soli, vrlo malo vanile i pavlaku za šlag, pa izblendaj sve štapnim mikserom. Stavi smesu da se hladi u frižideru bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled sa kikirikijem i slanom karamelom",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 200ml",
+      "Kikiriki 80g",
+      "Šećer 100g",
+      "Puter 45g",
+      "Brašno od rogača za zgušnjavanje 5g",
+      "So"
+    ],
+    "instructions": "Spremi karamel: u mali sud stavi šećer i upali srednju vatru. Varjačom mešaj sve dok šećer ne počne da se topi. Kad postane skroz tečan, dodaj puter (na sobnoj temp!) i brzo i energično mešaj dok se ne sjedini, oko 2-3 minuta. Sipaj pavlaku za šlag u šerpu i pusti da sve prokuva, pa posoli karamel. Spremi kikiriki puter: stavi kikiriki u secka i blendaj dok ne postane glatka, skoro tečna smesa. Sa strane zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj tako da nestanu sve grudvice. Dodaj karamel i kikiriki puter u mleko, pa izblendaj sve štapnim mikserom; ostavi smesu da se ohladi u frižideru bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled sa bananom i slanom karamelom",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 150ml",
+      "Banana 1 veća",
+      "Šećer 100g",
+      "Puter 45g",
+      "Brašno od rogača za zgušnjavanje 5g",
+      "So",
+      "Vanila"
+    ],
+    "instructions": "Spremi karamel: u mali sud stavi šećer i upali srednju vatru. Varjačom mešaj sve dok šećer ne počne da se topi. Kad postane skroz tečan, dodaj puter (na sobnoj temp!) i brzo i energično mešaj dok se ne sjedini, oko 2-3 minuta. Sipaj pavlaku za šlag u šerpu i pusti da sve prokuva, pa posoli karamel. Sa strane zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj tako da nestanu sve grudvice. Dodaj vanilu i bananu isečenu na kolutove, pa sve izblendaj štapnim mikserom dok ne postane homogeno. U mleko sipaj karamel i ponovo sve izblendaj štapnim mikserom; ostavi smesu da se ohladi u frižideru bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled od krema s limunom",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 160ml",
+      "Šećer 90g",
+      "Limun s jestivom korom 1",
+      "Žumance 4",
+      "Brašno rogača za zgušnjavanje 5g",
+      "Vanila"
+    ],
+    "instructions": "U malom sudu zagrej mleko zajedno sa korom jednog limuna skoro do ključanja. Sa strane pripremi žumanca: pomešaj ih sa šećerom, brašnom od rogača i vanilom, pa umuti dok ne postanu vazdušasta i svetla. U žumanca dodaj i 40ml soka od limuna. Smesu sa žumancem dodaj u mleko i energično mešaj dok se ne zgusne, oko 5 minuta. Dodaj pavlaku i izvadi koru od limuna, pa sve premesti u frižider da se hladi bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled od šumskog voća",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 200ml",
+      "Šećer 90g",
+      "Šumsko voće 250g",
+      "Brašno rogača za zgušnjavanje 5g",
+      "Vanila"
+    ],
+    "instructions": "Šumsko voće stavi u malu šerpu zajedno sa šećerom. Stavi ga na tihu vatru dok se ne usirupi i dok mu se volumen ne smanji značajno; na kraju izblendaj sve štapnim mikserom. Dobijenu smesu propusti kroz cediljku i baci semenke. U drugom sudu, zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj dok ne nestanu gromuljice, pa pomešaj mleko sa ostalim sastojcima (malinama, pavlakom i vanilom). Sve izblendaj štapnim mikserom dok ne postane homogeno i stavi u frižider bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled od malina",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 200ml",
+      "Šećer 90g",
+      "Maline 250g",
+      "Brašno rogača za zgušnjavanje 5g",
+      "Vanila"
+    ],
+    "instructions": "Oprane maline stavi u malu šerpu zajedno sa šećerom. Stavi ih na tihu vatru dok se ne usirupe i dok im se volumen ne smanji značajno; na kraju ih izblendaj štapnim mikserom. Dobijenu smesu propusti kroz cediljku i baci semenke. U drugom sudu, zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj dok ne nestanu gromuljice, pa pomešaj mleko sa ostalim sastojcima (malinama, pavlakom i vanilom). Sve izblendaj štapnim mikserom dok ne postane homogeno i stavi u frižider bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Sladoled od jagode",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Pavlaka za šlag 200ml",
+      "Mleko 200ml",
+      "Šećer 90g",
+      "Jagode 200g",
+      "Sok od limuna 30ml",
+      "Brašno rogača za zgušnjavanje 5g",
+      "So",
+      "Vanila"
+    ],
+    "instructions": "Iseckaj jagode i stavi ih u malu šerpu zajedno sa šećerom i sokom od limuna. Stavi ih na tihu vatru dok se ne usirupe i dok im se volumen ne smanji značajno; na kraju ih izblendaj štapnim mikserom. U drugom sudu, zagrej mleko skoro do ključanja i dodaj brašno od rogača. Mešaj dok ne nestanu gromuljice, pa pomešaj mleko sa ostalim sastojcima (jagodama, pavlakom, vanilom i malo soli). Sve izblendaj štapnim mikserom dok ne postane homogeno i stavi u frižider bar 3 sata. Smesu stavi u mašinu za sladoled na 40 minuta."
+  },
+  {
+    "title": "Naan",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Predjela i Prilozi", "Slano", "Svi recepti"],
+    "ingredients": [
+      "Brašno 250g",
+      "Jogurt 120g",
+      "Suvi kvasac 3g",
+      "Maslinovo ulje kašika",
+      "So",
+      "Puter za premazivanje"
+    ],
+    "instructions": "Pomešaj brašno, so i kvasac u činiji. Dodaj prvo jogurt i ulje, a onda počni da dodaješ malo po malo mlake vode (60ml ukupno), i rukama umesi testo. Kad dobiješ kuglu kojom možeš da manevrišeš, stavi je na pobrašnjenu površinu i mesi je rukama 7-10min, dok testo ne postane vrlo glatko. Pokrij testo krpom ili folijom i pusti da poraste 1 sat. Posle sat, testo je spremno za pečenje. Zagrej zamašćen nelepljivi tiganj na srednje-jakoj vatri. Testo podeli na četiri jednaka dela. Uzmi jedan komad testa, formiraj ga u kuglicu, pa ga na pobrašnjenoj površini razvij u veliki i tanki krug; spusti testo na tiganj. Ako je dovoljno tanko, naduvaće se kao balon. Posle par minuta ga okreni. Kad je gotov, izvadi naan na tanjir i premaži ga istopljenim puterom."
+  },
+  {
+    "title": "Humus",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Glavna jela", "Predjela i Prilozi", "Slano", "Svi recepti"],
+    "ingredients": [
+      "Susam 50g",
+      "Leblebije 240g",
+      "Maslinovo ulje",
+      "Sok od limuna 40g",
+      "Beli luk opciono, ali lepo",
+      "So"
+    ],
+    "instructions": "Napravi tahini: ispeci susam na toplom tiganju, pazeći da ne izgori. Dok je još topao sipaj ga u secka i blendaj dok ne ispusti svoje ulje i postane sasvim tečan, praveći pauze po potrebi. U tahini dodaj sok od limuna i so, pa izblendaj nekoliko sekundi. Dodaj i isprane leblebije (i beli luk) pa blendaj dok smesa ne postane glatka i homogena. Na kraju dodaj maslinovog ulja po želji; probaj da vidiš da li fali soli, kiseline ili masnoće. Humus se super slaže sa sveže ispečenim tortiljama ili naanom, turšijom, maslinama, svežim povrćem (šargarepa, celer, krastavac) i generalno sa grickalicama."
+  },
+  {
+    "title": "Dinstani krompiri i tikvice",
+    "date": "May 14, 2020",
+    "categories": ["Bez mesa", "Predjela i Prilozi", "Slano", "Svi recepti"],
+    "ingredients": [
+      "Tikvice 300g",
+      "Krompir 300g",
+      "Crni luk pola glavice",
+      "Vegeta",
+      "Maslinovo ulje",
+      "So",
+      "Biber"
+    ],
+    "instructions": "Oljušti i iseci na kriške krompire i tikvice. U dubljoj nelepljivoj šerpi zagrej ulja toliko da pokrije dno. Ubaci krompire u vrelo ulje; poklopi lonac i držeći šerpu čvrsto poklopljenu, protresi krompire tako da budu sasvim ravnomerno pokriveni uljem, pa ih ostavi da se prže na srednjoj vatri (poklopljene). Iseci crni luk na tanke kriške i dodaj ga u šerpu. S vremena na vreme okreni krompire tako da zarumene sa svih strana. Kad izgledaju skoro gotovo, dodaj i tikvice; stavi vegete i soli po ukusu, sve promešaj, pa poklopi. Posle 5 minuta, skloni poklopac i dodaj i pola čaše vode u šerpu. Mešaj s vremena na vreme, pazeći na to da se krompir ne raspadne. Gotovo je kad je skoro sva tečnost isparila. Dodaj bibera po ukusu na kraju."
+  },
+  {
+    "title": "Zapečeni karfiol sa bešamelom",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Glavna jela", "Predjela i Prilozi", "Rerna", "Slano", "Svi recepti"],
+    "ingredients": [
+      "Karfiol 800g",
+      "Brašno 30g",
+      "Puter 40g",
+      "Mleko 350ml",
+      "Parmezan 50g",
+      "Muškatni oraščić",
+      "Biber",
+      "So"
+    ],
+    "instructions": "Upali rernu na 220 stepeni i stavi veliku šerpu punu vode da se greje. Operi i iseci karfiol na “cvetove”, pa ih ubaci u ključalu vodu na 10-15 minuta. U međuvremenu spremi bešamel: zagrej puter u tiganju pa dodaj brašno i proprži ga dok ne zamiriše lepo. Počni da dodaješ mleko malo po malo, energično mešajući sve vreme tako da brašno homogeno upije mleko. Na kraju dodaj i muškatni oraščić, biber, so i polovinu narendanog parmezana. Ocedi karfiol i pomešaj ga dobro sa bešamelom, pa ga prebaci u nelepljivu tepsiju. Ubaci karfiol u rernu i peci ga dok ne zarumeni, oko 10 minuta."
+  },
+  {
+    "title": "Ljiljin voćni kolač",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Doručak", "Rerna", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Maline, borovnice ili višnje 150g",
+      "Brašno 140g",
+      "Puter 120g",
+      "Šećer 120g",
+      "Sok od limuna 60ml",
+      "Jaja 3",
+      "Prašak za pecivo pola kesice",
+      "Vanila kašičica",
+      "So",
+      "Po ukusu kora od limuna"
+    ],
+    "instructions": "Podmaži manji pleh puterom, pa ga pobrašnji, pa ga stavi u frižider. Upali rernu na 200 stepeni. Odvoji žumanca od belanaca. Belanca stavi u činiju, malo ih posoli i umuti ih mikserom u “čvrst sneg”. U drugu činiju sipaj brašno, šećer i prašak za pecivo i sve promešaj. Dodaj smekšan puter, žumanca, sok od limuna i vanilu; umuti smesu mikserom. Dodaj i koru od limuna ako želiš. Uzmi dobru kašiku belanaca i ubaci je u drugu činiju; sve dobro promešaj. Onda sipaj i ostatak belanaca i nežno ih inkorporiraj mešajući odozdo na gore; zaustavi se čim više nema vidljivih komada umućenog belanca. Smesu sipaj u hladnu tepsiju. Rasporedi voće u tepsiji, pazeći da ne dodiruje bočne strane tepsije. Peci u rerni oko 30 minuta ili dok čačkalica ubodena u sredinu kolača ne izađe suva."
+  },
+  {
+    "title": "Baci di dama",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Rerna", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Bademi 100g",
+      "Šećer 100g",
+      "Puter 100g",
+      "Brašno 150g",
+      "Vanila",
+      "So",
+      "Crna čokolada 50g"
+    ],
+    "instructions": "Ako nemaš već blanširane bademe, blanširaj ih. Bademe sa ljuskom ubaci u ključalu vodu na 40 sekundi, pa ih ohladi pod mlazom hladne vode; ručno ih oljušti. Ohlađene i osušene bademe stavi u secka zajedno sa šećerom, pa ih blendaj dok ne postigneš brašnjavu teskturu. Pomešaj bademe sa brašnom i mekim puterom, pa dodaj malo soli i vanile po ukusu. Dobićeš gustu smesu. Upali rernu na 160 stepeni. Na tepsiju prekrivenu papirom za pečenje slaži vrlo male kuglice testa (ne veće od 2cm), imajući na umu da će se u rerni malo spljoštiti. Ubaci tepsiju u rernu i peci 30 minuta. Za to vreme istopi čokoladu u mikrotalasnoj ili na vatri u posudi sa duplim dnom. Gotove keksiće pusti da se ohlade, pa počni da ih sastavljaš: uzmi dva keksića slične veličine, stavi malo istopljene čokolade na dno jednog i zalepi ga za drugi, pa položi i pusti da se čokolada stvrdne."
+  },
+  {
+    "title": "Magični banana sladoled",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Banane 3 male ili 2 velike, zrele",
+      "Kikiriki ili kikiriki puter 40g",
+      "Kakao 20g",
+      "Med kašika",
+      "Mleko kašika-dve"
+    ],
+    "instructions": "Iseci banane na kolutove. Složi kolutove u tepsiju, pokrij ih folijom i stavi ih u friz na 2-3 sata. Ako nemaš kikiriki puter, napravi ga. Stavi kikiriki u secka i blendaj na najjačoj brzini oko 30 sekundi, pa pusti secka da odmori 2 minuta. Ponovi dok ne dobiješ kremast kikiriki puter. Kad su banane sasvim smrznute, stavi ih u secka zajedno sa ostalim sastojcima i blendaj dok ne dobiješ savršenu kremastu smesu."
+  },
+  {
+    "title": "Izgoreli čizkejk",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Rerna", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Krem sir 1kg",
+      "Šećer 200g",
+      "Jaja 6",
+      "Neutralna pavlaka 100ml",
+      "Slatka pavlaka za šlag 100ml",
+      "So kašičica",
+      "Vanila kašičica",
+      "Brašno 45g"
+    ],
+    "instructions": "Za ovaj kolač je neophodno imati kalup sa odvojivim dnom. Pre svega, pripremi kalup tako što ćeš ga sasvim obložiti (i sa strane!) sa dva sloja papira za pečenje. Upali rernu na 210 stepeni. Stavi krem sir u veliku činiju pogodnu za misker. Dodaj šećer i nežno muti mikserom dok ne dobiješ vrlo homogenu i glatku smesu. Pojačaj brzinu miksera i počni sa dodavanjem jaja, jedno po jedno, tako da dobiješ vrlo glatku i pomalo vazdušastu smesu. Zatim dodaj obe pavlake, so, vanilu i sve umešaj. Prosej brašno u smesu i umuti je mikserom dok ne postane savršeno homogena. Smesu ulij u kalup i peci je 60 minuta. Kad je gotova, pusti je da se ohladi do sobne temperature, otvori kalup i odvoji papir za pečenje od bočnih strana kolača."
+  },
+  {
+    "title": "Palačinke",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Doručak", "Glavna jela", "Slano", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Brašno 200g",
+      "Jaja 2",
+      "Mleko 200ml",
+      "Suncokretovo ulje 2 kašike",
+      "So kašičica",
+      "Šećer kašika",
+      "Kisela voda 200ml",
+      "Po ukusu: vanila, kora od limuna"
+    ],
+    "instructions": "U činiju ubaci brašno, šećer, i so. Dodaj jaja, ulje i 50ml mleka, pa sve dobro umešaj (idealno mikserom) dok ne nestanu gromuljice. Sipaj ostatak mleka u smesu i promešaj. Sipaj i kiselu vodu. Smesu je najbolje ostaviti u frižideru da odmori sat vremena, ali može i odmah da se upotrebi. Sipaj po kutlaču smese u vreo zamašćeni tiganj. Posle minut-dva, okreni palačinku. Kad je gotova, stavi je u tanjir. Ponovi sve dok ne upotrebiš svu smesu."
+  },
+  {
+    "title": "Krostata sa kremom od limuna",
+    "date": "May 13, 2020",
+    "categories": ["Bez mesa", "Rerna", "Slatko", "Svi recepti"],
+    "ingredients": [
+      "Meko brašno 120g",
+      "Oštro brašno 130g",
+      "Kukuruzni skrob 95g",
+      "Puter 200g",
+      "Limun jedan, sa jestivom korom",
+      "Jaja 7; 1 celo, 6 žumanaca",
+      "Mleko 380ml",
+      "Šećer 190g",
+      "Vanila kašičica",
+      "Neutralna pavlaka 100ml",
+      "So",
+      "Suvi pasulj za pečenje"
+    ],
+    "instructions": "Testo: pomešaj u činiji brašno, 50g skroba i pola kašičice soli. Dodaj malo izrendane kore od limuna. Ubaci i 100g šećera. Iseckaj hladan puter na kockice, pa ga brzo umešaj u brašno, štipkajući smesu tako da se brašno inkorporira u puter; cilj je da se puter nikad ne zagreje. Rezultat treba da izgleda kao gomila krupnih i sitnih mrva. U smesu dodaj jaje i kašiku-dve jako hladne vode, promešaj i formiraj testo u kuglu. Kuglu malo spljosni pa je umotaj u foliju i stavi u frižider da odmori bar sat vremena. Krem: oljušti limun pazeći da zahvatiš samo žuti deo kore (beli deo kore je gorak). Stavi mleko, pavlaku i sok od polovine limuna da se zagreju, ali ne dopusti da provri. U mleko dodaj vanilu i koru od limuna. Dok se mleko greje umuti 6 žumanaca i 90g šećera dok smesa ne postane svetla i penušava, pa u tu smesu pažljivo dodaj 45g skroba, pazeći na gromuljice. Smesu sa žumancima sipaj u vrelo mleko i kuvaj mešajući dok se ne zgusne (ne više od 3-4 minuta). Gotov krem onda procedi kroz cediljku i stavi sa strane. Upali rernu na 200 stepeni. Izvadi testo iz frižidera. U zavisnosti od kalupa za kolače koji imaš, razvij testo oklagijom u oblik malo veći od kalupa, pa ga nežno spusti u kalup (ako se negde raspadne samo zakrpi). Ako ti se čini da se testo malo zagrejalo, stavi ga sa sve kalupom u frižider na desetak minuta. Pre pečenja, prekrij testo papirom za pečenje i sipaj pasulj preko; težina pasulja će onemogućiti dnu testa da se podigne dok se peče. Ubaci testo s pasuljem u rernu i peci dok ivice ne počnu da dobijaju lepu zlatnu boju, oko 20-30 minuta. Izvadi testo iz rerne i pažljivo podigni papir za pečenje za pasuljima (koji su sad jako vreli) i stavi ih sa strane. Sipaj krem u “koru” i vrati sve u rernu na 10 minuta. Gotov kolač ohladi na sobnoj temperaturi, pa ga stavi u frižider; treba sasvim da se ohladi pre jela kako bi se krem učvrsnuo."
+  }
+]
+
         ];
 
         // State Management
         let currentCategory = 'Svi recepti';
         let searchQuery = '';
         let currentPage = 1;
-        const recipesPerPage = 4; // Broj recepata koji se prikazuju po stranici na početnoj
-
-        function navigateTo(view) {
-            document.getElementById('view-feed').classList.add('hidden');
-            document.getElementById('view-recipe').classList.add('hidden');
-            document.getElementById('view-about').classList.add('hidden');
-            document.getElementById('view-all-recipes').classList.add('hidden');
-            
-            document.getElementById('nav-home').classList.remove('active');
-            document.getElementById('nav-all').classList.remove('active');
-            document.getElementById('nav-about').classList.remove('active');
-
-            if (view === 'o-kuvaru') {
-                document.getElementById('view-about').classList.remove('hidden');
-                document.getElementById('nav-about').classList.add('active');
-            } else if (view === 'svi-recepti') {
-                renderDirectory();
-                document.getElementById('view-all-recipes').classList.remove('hidden');
-                document.getElementById('nav-all').classList.add('active');
-            } else if (view.startsWith('recipe-')) {
-                const idx = view.split('-')[1];
-                renderSingleRecipe(idx);
-                document.getElementById('view-recipe').classList.remove('hidden');
-            } else {
-                document.getElementById('view-feed').classList.remove('hidden');
-                document.getElementById('nav-home').classList.add('active');
-                currentPage = 1; // resetuj stranu kod povratka
-                renderFeed();
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function handleSearch(query) {
-            searchQuery = query.toLowerCase();
-            currentPage = 1; // Pretraga uvek vraća na prvu stranu rezultata
-            renderFeed();
-        }
-
-        function changePage(direction) {
-            currentPage += direction;
-            renderFeed();
-            window.scrollTo({ top: 300, behavior: 'smooth' });
-        }
+        const recipesPerPage = 4;
 
         function renderFeed() {
             const container = document.getElementById('feed-container');
@@ -943,137 +1098,106 @@
             const paginationControls = document.getElementById('pagination-controls');
             container.innerHTML = '';
 
-            // Filtriranje elemenata prema kategoriji i pretrazi
             const filtered = recipes.filter(recipe => {
-                const matchesCategory = recipe.categories.includes(currentCategory);
+                const matchesCategory = currentCategory === 'Svi recepti' || recipe.categories.includes(currentCategory);
                 const matchesSearch = recipe.title.toLowerCase().includes(searchQuery) || 
                                       recipe.ingredients.some(i => i.toLowerCase().includes(searchQuery));
                 return matchesCategory && matchesSearch;
             });
 
-            if (filtered.length === 0) {
+            // Pagination logic
+            const startIndex = (currentPage - 1) * recipesPerPage;
+            const paginatedItems = filtered.slice(startIndex, startIndex + recipesPerPage);
+
+            if (paginatedItems.length === 0) {
                 emptyState.classList.remove('hidden');
                 paginationControls.classList.add('hidden');
-                return;
-            }
-
-            emptyState.classList.add('hidden');
-            paginationControls.classList.remove('hidden');
-
-            // Izračunavanje indeksa za trenutnu stranicu (paginaciju)
-            const totalPages = Math.ceil(filtered.length / recipesPerPage);
-            if (currentPage > totalPages) currentPage = totalPages;
-            if (currentPage < 1) currentPage = 1;
-
-            const startIndex = (currentPage - 1) * recipesPerPage;
-            const endIndex = startIndex + recipesPerPage;
-            const paginatedItems = filtered.slice(startIndex, endIndex);
-
-            // Renderovanje isečka recepata
-            paginatedItems.forEach(recipe => {
-                const globalIdx = recipes.indexOf(recipe);
-                const card = document.createElement('div');
-                card.className = 'recipe-card';
-                card.innerHTML = `
-                    <div class="recipe-card-meta">
-                        <span><i class="fa-solid fa-calendar"></i> ${recipe.date}</span>
-                    </div>
-                    <h2 class="recipe-card-title" onclick="navigateTo('recipe-${globalIdx}')">${recipe.title}</h2>
-                    <p class="recipe-card-excerpt">${recipe.instructions}</p>
-                    <div class="recipe-card-tags">
-                        ${recipe.categories.map(cat => `<span class="recipe-card-tag">${cat}</span>`).join('')}
-                    </div>
-                    <button class="read-more-btn" onclick="navigateTo('recipe-${globalIdx}')">
-                        Pročitaj recept <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                `;
-                container.appendChild(card);
-            });
-
-            // Kontrola izgleda dugmića za navigaciju unazad/unapred
-            document.getElementById('page-number').innerText = `Strana ${currentPage} od ${totalPages}`;
-            document.getElementById('btn-prev').disabled = (currentPage === 1);
-            document.getElementById('btn-next').disabled = (currentPage === totalPages);
-            
-            if(totalPages <= 1) {
-                paginationControls.classList.add('hidden');
             } else {
+                emptyState.classList.add('hidden');
                 paginationControls.classList.remove('hidden');
+                
+                paginatedItems.forEach((recipe, idx) => {
+                    const originalIdx = recipes.indexOf(recipe);
+                    const card = document.createElement('div');
+                    card.className = 'recipe-card';
+                    card.innerHTML = `
+                        <div class="recipe-card-meta"><span><i class="fa-solid fa-calendar"></i> ${recipe.date}</span></div>
+                        <h2 class="recipe-card-title" onclick="navigateTo('recipe-${originalIdx}')">${recipe.title}</h2>
+                        <div class="recipe-card-tags">${recipe.categories.map(c => `<span class="recipe-card-tag">${c}</span>`).join('')}</div>
+                        <button class="read-more-btn" onclick="navigateTo('recipe-${originalIdx}')">
+                            Pročitaj recept <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    `;
+                    container.appendChild(card);
+                });
             }
+            document.getElementById('page-number').innerText = `Strana ${currentPage}`;
+            document.getElementById('btn-prev').disabled = currentPage === 1;
+            document.getElementById('btn-next').disabled = (startIndex + recipesPerPage) >= filtered.length;
         }
 
-        // Renderuje novu stranicu sa celim direktorijumom/arhivom recepata
-        function renderDirectory() {
-            const container = document.getElementById('directory-container');
-            container.innerHTML = '';
+        function navigateTo(view) {
+            document.getElementById('view-feed').classList.add('hidden');
+            document.getElementById('view-recipe').classList.add('hidden');
+            document.getElementById('view-about').classList.add('hidden');
+            document.getElementById('view-all-recipes').classList.add('hidden');
             
-            recipes.forEach((recipe, idx) => {
-                const item = document.createElement('div');
-                item.className = 'directory-item';
-                item.onclick = () => navigateTo(`recipe-${idx}`);
-                item.innerHTML = `
-                    <span class="directory-title"><i class="fa-solid fa-cookie"></i> ${recipe.title}</span>
-                    <span class="directory-meta">${recipe.date}</span>
-                `;
-                container.appendChild(item);
-            });
+            if (view === 'o-kuvaru') {
+                document.getElementById('view-about').classList.remove('hidden');
+            } else if (view === 'svi-recepti') {
+                renderDirectory();
+                document.getElementById('view-all-recipes').classList.remove('hidden');
+            } else if (view.startsWith('recipe-')) {
+                renderSingleRecipe(view.split('-')[1]);
+                document.getElementById('view-recipe').classList.remove('hidden');
+            } else {
+                renderFeed();
+                document.getElementById('view-feed').classList.remove('hidden');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function renderSingleRecipe(index) {
+        function renderSingleRecipe(idx) {
+            const recipe = recipes[idx];
             const container = document.getElementById('recipe-container');
-            const recipe = recipes[index];
-            
             container.innerHTML = `
-                <button class="back-link" onclick="navigateTo('')">
-                    <i class="fa-solid fa-arrow-left"></i> Nazad na početnu
-                </button>
+                <button class="back-link" onclick="navigateTo('')"><i class="fa-solid fa-arrow-left"></i> Nazad</button>
                 <h2>${recipe.title}</h2>
-                <div class="recipe-card-meta" style="margin-top: 1rem; margin-bottom: 2rem;">
-                    <span><i class="fa-solid fa-calendar"></i> ${recipe.date}</span>
-                </div>
                 <div class="recipe-details-grid">
                     <div class="ingredients-box">
-                        <h3 class="section-title"><i class="fa-solid fa-lemon"></i> Sastojci</h3>
-                        <ul class="ingredients-list">
-                            ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
-                        </ul>
+                        <h3 class="section-title"><i class="fa-solid fa-list-ul"></i> Sastojci</h3>
+                        <ul class="ingredients-list">${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
                     </div>
                     <div>
                         <h3 class="section-title"><i class="fa-solid fa-kitchen-set"></i> Priprema</h3>
-                        <ol class="prep-steps">
-                            ${recipe.instructions.split('. ').map(step => step.trim() ? `<li>${step}.</li>` : '').join('')}
-                        </ol>
+                        <ol class="prep-steps"><li>${recipe.instructions}</li></ol>
                     </div>
                 </div>
             `;
         }
 
-        function initCategories() {
-            const categorySet = new Set();
-            recipes.forEach(r => r.categories.forEach(c => categorySet.add(c)));
-            
-            const container = document.getElementById('sidebar-categories');
-            container.innerHTML = '';
-
-            Array.from(categorySet).sort().forEach(cat => {
-                const pill = document.createElement('span');
-                pill.className = `category-pill ${cat === currentCategory ? 'active' : ''}`;
-                pill.innerText = cat;
-                pill.onclick = () => {
-                    document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
-                    pill.classList.add('active');
-                    currentCategory = cat;
-                    currentPage = 1;
-                    renderFeed();
-                };
-                container.appendChild(pill);
-            });
+        function renderDirectory() {
+            document.getElementById('directory-container').innerHTML = recipes.map((r, i) => `
+                <div class="directory-item" onclick="navigateTo('recipe-${i}')">
+                    <span class="directory-title">${r.title}</span>
+                    <span class="directory-meta">${r.date}</span>
+                </div>
+            `).join('');
         }
 
-        window.onload = () => {
-            initCategories();
+        function handleSearch(query) {
+            searchQuery = query.toLowerCase();
+            currentPage = 1;
             renderFeed();
-        };
+        }
+
+        function changePage(dir) {
+            currentPage += dir;
+            renderFeed();
+        }
+
+        // Initialize
+        renderFeed();
     </script>
 </body>
 </html>
