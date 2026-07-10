@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8"><viewport content="width=device-width, initial-scale=1.0">
+    <title>O kuvaru - Limunasti kuvar</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 4rem auto; padding: 0 1rem; }
+        a { color: #2c3e50; font-weight: bold; text-decoration: none; }
+        header { border-bottom: 4px solid #f4d03f; padding-bottom: 1rem; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">← Nazad na početnu</a>
+        <h1>O kuvaru</h1>
+    </header>
+    <p>Dobrodošli na Limunasti kuvar!</p>
+    <p>Ovo je mesto gde sakupljamo i delimo recepte za jela koja spremamo i u kojima uživamo. Fokus je na jednostavnim sastojcima, preciznim merama i koracima koje svako može da isprati kod kuće.</p>
+</body>
+</html>
